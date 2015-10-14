@@ -9,11 +9,7 @@ Aurmicrosite::Application.routes.draw do
 
   root :to => 'pages#home'
   
-  # get 'holding' => 'pages#holding'
-  # get 'about' => 'pages#about'
-  # get 'welcome' => 'pages#live'
-  # get 'webcast' => 'pages#webcast'
-
+  get 'home' => 'pages#home'
   get 'live' => 'pages#live'
 
 

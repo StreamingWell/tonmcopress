@@ -65,7 +65,7 @@ module Aurmicrosite
     config.action_mailer.smtp_settings = {
       :address              => "smtp.mandrillapp.com",
       :port                 => 587,
-      :domain               => "http://realiseasthma.com",
+      :domain               => "http://eisaimediaportal.eu",
       :user_name            => "app17465350@heroku.com",
       :password             => "_P5ab_dBdDDbqojaL5p4qw",
       :authentication       => :plain,
@@ -73,7 +73,7 @@ module Aurmicrosite
     }
 
     config.action_mailer.default_url_options = {
-      :host => "http://realiseasthma.com"
+      :host => "http://eisaimediaportal.eu"
     }
   end
 end

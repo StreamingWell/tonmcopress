@@ -1,46 +1,31 @@
-<body class="<%= @home_page ? 'homepage' : ''%>">
+<div class="span12" style="margin-top: 25px;">
+	<h1>Insert Title</h1>
+	<p>2015 15th International Thyroid Congress (ITC) | Orlando, FL | October 18-23, 2015 </p>
+	<hr>
+</div>
 
-<div class="container">
-	<div class="jumbotron" style="background-color: #fff">
-
-
-		<!-- <h1>
-			Realising <strong>the true impact</strong> of asthma
-		</h1>
-
-		<p><i>
-			 European Respiratory Society (ERS) Annual Congress 2013
-		</p>
-
-		<p>
-			Tuesday 10 September, 14:30 – 15:15 CET
-		</i></p>
-			
-			<h3>FOR EUROPEAN MEDIA ONLY</h3>
-
-			<h4>Please register below to participate in the online media briefing.</h4> -->
-			
-
-			<img src='/assets/Realise_logo_RGB_150px.jpg' />
-			<img src='/assets/mint.jpg' width="150px"/>
-
-			<hr>
-
-			<h5><span style="color:#000">For more information about the REALISE survey, please contact </span><br><span style="color:#000">Aurora at <a href= "mailto:mint@auroracomms.com">mint@auroracomms.com</a> or on +44 (0)20 7148 4170. </span></h5>
+<div class="span7" style="margin-bottom: 25px;">
+INSERT ABOUT
 
 </div>
 
 <br>
 
-<!-- <div class="marketing span6">
+<div class="span4">
+
+	<!-- flash_notice to show if form submission is unsuccessful -->
+	<div class="alert alert-notice" id="form-error" style="display: none;">
+		Please fill in all fields and confirm you are a journalist.
+	</div>
 
 	<div id="flash_notice" style="display:none"></div>
 		<%= simple_form_for :registration, :url => registration_path do |form| %>
 		<%= form.error_notification %>
-		  <%= form.input :name %>
-		  <%= form.input :media %>
-	  		<%= form.input :country %>
-	  		<%= form.input :email %>
+		  <%= form.input :firstname, label: "First Name" %>
+		  <%= form.input :lastname, label: "Last Name" %>
+		  <%= form.input :media, label: "Media Outlet"%>
+  		<%= form.input :country, label: "Country" %>
+  		<%= form.input :email, label: "Email Address" %>
 		  	
 		  	<div class="field">
 				<%= form.input :journalist, :as => :boolean, :required => true, label: "Please tick to confirm you are a journalist." %>
@@ -52,7 +37,7 @@
 		</div>
 	<% end %>
 
-</div>	-->	
+</div>		
 
 <%= yield %>
 

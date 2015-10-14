@@ -1,13 +1,11 @@
 class NotificationsMailer < ActionMailer::Base
 
-  default :from => "carolin@auroracomms.com"
-  default :to => "bily.kuo@mundipharma.co.uk"
-  default :cc => "mint@auroracomms.com"
-  default :bcc => "carolin@auroracomms.com"
+  default :from => "branden.mittra@streamingwell.com"
+  default :to => "branden.mittra@streamingwell.com"
 
   def new_message(message)
     @message = message
-    mail(:subject => "Realise Asthma Q&A")
+    mail(:subject => "Eisai Media Portal Question")
   end
 
 end

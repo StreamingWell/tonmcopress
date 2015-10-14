@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Realising the true impact of asthma | REALISE&trade;</title>
-    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <title>Eisai Media Portal | eisaimediaportal.eu</title>
+    <%= stylesheet_link_tag  'application', :media => "all" %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
-
     <%= tag :meta, name: "viewport", content: "width=device-width, initial-scale=1.0" %>
   </head>
   <body>
-
-    <%= render 'layouts/header' %>
+ <hr style="border: solid 5px #008AB4; margin-top: -5px;">
+  <%= render 'layouts/header' %>
   
   <div class="container">
       <% flash.each do |name, msg| %>
-          <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+        <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
         <% end %>
         <%= yield %>
 
   <%= render 'layouts/footer' unless @disable_nav %>
 
     <% if Rails.env.production? %>  
-        <%= render 'layouts/ga' %>
-      <% end %> 
-
+      <%= render 'layouts/ga' %>
+    <% end %> 
   </body>
 </html>
