@@ -4,9 +4,9 @@ class Registration
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  attr_accessor :name, :media, :country, :email, :journalist
+  attr_accessor :firstname, :lastname, :media, :country, :email, :journalist
 
-  validates :name, :media, :country, :email, :presence => true
+  validates :firstname, :lastname, :media, :country, :email, :presence => true
   validates_acceptance_of :journalist
   
   def initialize(attributes = {})
